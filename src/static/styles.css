@@ -94,23 +94,59 @@ section h3 {
 }
 
 .participant-list {
-  padding-left: 20px;
+  padding: 0;
   color: #424b62;
+  list-style: none;
 }
 
 .participant-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
   padding: 2px 0;
   overflow-wrap: anywhere;
 }
 
-.participant-list li::marker {
-  color: #3949ab;
+.participant-list li span {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .participant-list .empty {
   color: #68728a;
   font-style: italic;
-  list-style: none;
+}
+
+.remove-participant-button {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 6px;
+  border: 1px solid #e2b8bc;
+  border-radius: 6px;
+  background-color: #fff;
+  color: #b42332;
+}
+
+.remove-participant-button:hover,
+.remove-participant-button:focus-visible {
+  border-color: #b42332;
+  background-color: #fff0f1;
+}
+
+.remove-participant-button:disabled {
+  cursor: wait;
+  opacity: 0.55;
+}
+
+.remove-participant-button svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
 }
 
 .form-group {
